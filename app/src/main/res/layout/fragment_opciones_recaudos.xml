@@ -1,0 +1,105 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartera.masterkey.cartera.views.fragments.OpcionesRecaudosFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout style="@style/layoutStyleBtnProductos">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_fondo_boton">
+
+                    <LinearLayout
+                        android:id="@+id/bottonClientes"
+                        style="@style/SelectableItemBackgroundButtonProducto">
+
+                        <TextView
+                            style="@style/textViewProductos"
+                            android:drawableLeft="@drawable/ic_clientes"
+                            android:text="@string/clientes" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout style="@style/layoutStyleBtnProductos">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_fondo_boton">
+
+                    <LinearLayout
+                        android:id="@+id/bottonPromesas"
+                        style="@style/SelectableItemBackgroundButtonProducto">
+
+                        <TextView
+                            style="@style/textViewProductos"
+                            android:drawableLeft="@drawable/ic_promesas"
+                            android:text="@string/promesas" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            app:cardCornerRadius="5dp">
+
+            <LinearLayout style="@style/layoutStyleBtnProductos">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/img_fondo_boton">
+
+                    <LinearLayout
+                        android:id="@+id/bottonReportes"
+                        style="@style/SelectableItemBackgroundButtonProducto">
+
+                        <TextView
+                            style="@style/textViewProductos"
+                            android:drawableLeft="@drawable/ic_reportes"
+                            android:text="@string/reportes" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5" />
+
+        <include layout="@layout/footer_layout" />
+    </LinearLayout>
+</FrameLayout>

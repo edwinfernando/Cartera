@@ -1,0 +1,194 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartera.masterkey.cartera.views.fragments.RealizarRecaudoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/cliente" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <TextView
+                android:id="@+id/txtCliente"
+                style="@style/editText_style"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/cuenta_nro" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <TextView
+                android:id="@+id/txtCuentaNro"
+                style="@style/editText_style"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <!--Layout para campo textEdit-->
+        <LinearLayout
+            style="@style/linearLayout_horizontal"
+            android:layout_weight="2.5">
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_height="match_parent"
+                android:paddingRight="4dp">
+
+                <TextView
+                    style="@style/textView"
+                    android:text="@string/valor_cuota" />
+
+                <EditText
+                    android:id="@+id/edtValorCouta"
+                    style="@style/editText_style"
+                    android:background="@drawable/gradient_edit_text"
+                    android:layout_marginRight="0dp"
+                    android:gravity="left|center"
+                    android:textColor="@color/colorWhite" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="4dp">
+
+                <TextView
+                    style="@style/textView"
+                    android:text="@string/couta_nro" />
+
+                <EditText
+                    android:id="@+id/edtNumeroCopias"
+                    style="@style/editText_style"
+                    android:layout_marginRight="0dp"
+                    android:gravity="left|center"
+                    android:editable="false"
+                    android:textColor="#ff000000" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/fecha_vencimiento" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <TextView
+                android:id="@+id/txtFechaVencimiento"
+                style="@style/editText_style"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/saldo_al_pagar_esta_cuota" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <TextView
+                android:id="@+id/txtSaldoAlPagar"
+                style="@style/editText_style"
+                android:background="@drawable/gradient_edit_text"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/fecha_de_pago" />
+
+
+            <EditText
+                android:id="@+id/txtFechaPago"
+                style="@style/editText_style"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!--Layout para campo textEdit-->
+        <LinearLayout
+            style="@style/linearLayout_horizontal"
+            android:layout_marginTop="5dp">
+
+            <LinearLayout
+                style="@style/Button.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/gradient_cancelar">
+
+                <ImageButton
+                    android:id="@+id/btnLimpiar"
+                    style="@style/SelectableItemBackgroundButtonDark"
+                    android:src="@drawable/ic_clean" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/Button.Formulario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.5">
+
+                <Button
+                    android:id="@+id/btnRecaudar"
+                    style="@style/SelectableItemBackgroundButtonDark"
+                    android:text="@string/recaudar" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

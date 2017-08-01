@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/btnVerCliente"
+        android:orderInCategory="100"
+        android:title="@string/ver_cliente"
+        android:icon="@drawable/ic_action_cliente"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/btnRecaudar"
+        android:orderInCategory="100"
+        android:title="@string/recaudar"
+        android:icon="@drawable/ic_action_recaudar"
+        app:showAsAction="always" />
+</menu>

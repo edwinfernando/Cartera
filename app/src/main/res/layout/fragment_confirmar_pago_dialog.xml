@@ -1,0 +1,56 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.cartera.masterkey.cartera.views.dialogs.ConfirmarPagoDialogFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp">
+
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/cuenta_nro" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <EditText
+                android:id="@+id/edtCuentaNro"
+                style="@style/editText_style"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/valor_de_pago" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <EditText
+                android:id="@+id/edtValorPago"
+                style="@style/editText_style"
+                android:background="@drawable/gradient_edit_text"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="@color/colorWhite" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

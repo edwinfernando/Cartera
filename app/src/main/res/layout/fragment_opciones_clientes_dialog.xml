@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/margin_adapter"
+    android:paddingRight="@dimen/margin_adapter"
+    tools:context="com.cartera.masterkey.cartera.views.dialogs.OpcionesClientesDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            style="@style/Button.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnVerCliente"
+                style="@style/SelectableItemBackgroundButtonDark"
+                android:text="@string/ver_cliente" />
+        </LinearLayout>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+        <LinearLayout
+            style="@style/Button.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnVerMapa"
+                style="@style/SelectableItemBackgroundButtonDark"
+                android:text="@string/ver_mapa" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            style="@style/Button.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnRecaudar"
+                style="@style/SelectableItemBackgroundButtonDark"
+                android:text="@string/recaudar" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

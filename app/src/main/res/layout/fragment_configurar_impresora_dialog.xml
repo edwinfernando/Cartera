@@ -1,0 +1,46 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartera.masterkey.cartera.views.dialogs.ConfigurarImpresoraDialogFragment">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+
+        <!--Layout para campo textEdit-->
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/seleccionarImpresora" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_white">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spnImpresoras"
+                    style="@style/spinner_style" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+</FrameLayout>

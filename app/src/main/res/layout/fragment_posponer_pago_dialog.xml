@@ -1,0 +1,113 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartera.masterkey.cartera.views.dialogs.PosponerPagoDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp">
+
+        <!--Layout para campo textEdit-->
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/fecha_de_pago" />
+
+            <LinearLayout
+                style="@style/linearLayout_horizontal"
+                android:weightSum="1">
+
+                <!-- android:imeOptions="actionDone"-->
+                <EditText
+                    android:id="@+id/edtFechaPago"
+                    style="@style/editText_style"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.2"
+                    android:gravity="left|center"
+                    android:inputType="date"
+                    android:textColor="#ff000000" />
+
+                <LinearLayout
+                    style="@style/Button.Peque"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8">
+
+                    <ImageButton
+                        android:id="@+id/btnFechaPago"
+                        style="@style/SelectableItemBackgroundButtonDark"
+                        android:src="@drawable/ic_calendar" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--Layout para campo textEdit-->
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/hora_de_pago" />
+
+            <LinearLayout
+                style="@style/linearLayout_horizontal"
+                android:weightSum="1">
+
+                <!-- android:imeOptions="actionDone"-->
+                <EditText
+                    android:id="@+id/edt_fecha_hasta"
+                    style="@style/editText_style"
+                    android:layout_height="40dp"
+                    android:layout_weight="0.2"
+                    android:gravity="left|center"
+                    android:inputType="date"
+                    android:textColor="#ff000000" />
+
+                <LinearLayout
+                    style="@style/Button.Peque"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.8">
+
+                    <ImageButton
+                        android:id="@+id/btn_fecha_hasta"
+                        style="@style/SelectableItemBackgroundButtonDark"
+                        android:src="@drawable/ic_time" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="10dp"
+            android:paddingRight="8dp">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/nota" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <EditText
+                android:id="@+id/edtDescripcion"
+                style="@style/editText_style.area"
+                android:layout_marginRight="0dp"
+                android:textColor="#ff000000"
+                android:inputType="textMultiLine"
+                android:hint=""/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

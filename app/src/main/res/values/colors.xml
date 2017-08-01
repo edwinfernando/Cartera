@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF9800</color>
+    <color name="primary_light">#B2DFDB</color>
+
+    <color name="colorFondo">#00A8E2</color>
+    <color name="colorFondoDark">#2343F8</color>
+    <color name="colorAzulClaroAlpha">#643f6ffa</color>
+    <color name="colorPrincipal">#FFFFFF</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhiteAlpha">#64ffffff</color>
+    <color name="colorBlackAlpha">#46000000</color>
+    <color name="colorBlackAlpha2">#1e000000</color>
+    <color name="colorBlackAlpha3">#0b000000</color>
+    <color name="colorBlackAlphaHint">#78000000</color>
+    <color name="colorBlack">#000000</color>
+
+    <color name="colorBoton">#E8C600</color>
+    <color name="colorBotonAlpha">#7de8c600</color>
+    <color name="colorBotonDark">#F29100</color>
+    <color name="colorBotonDarkAlpha">#7df29100</color>
+    <color name="colorBotonAzulAlpha">#e6182ad3</color>
+    <color name="colorBotonAzulDarkAlpha">#f01300a8</color>
+    <color name="colorGray">#727176</color>
+    <color name="colorGrayDark">#5B5B5F</color>
+    <color name="colorRojo">#d3181b</color>
+    <color name="colorRojoDark">#a80008</color>
+</resources>

@@ -1,0 +1,126 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFondo"
+    tools:context="com.cartera.masterkey.cartera.views.dialogs.FiltroClientesDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_sobre_fondo"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+        <include layout="@layout/toolbar_filtro" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBlackAlpha2"
+            android:layout_marginBottom="5dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--Layout para campo textEdit-->
+                <LinearLayout style="@style/linearLayout_vertical_edt">
+
+                    <TextView
+                        style="@style/textViewFiltro"
+                        android:text="@string/empresa"/>
+
+                    <!-- android:imeOptions="actionDone"-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spnEmpresa"
+                            style="@style/spinner_style" />
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <!--Layout para campo textEdit-->
+                <LinearLayout style="@style/linearLayout_vertical_edt">
+
+                    <TextView
+                        style="@style/textViewFiltro"
+                        android:text="@string/cliente" />
+
+                    <!-- android:imeOptions="actionDone"-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spnCliente"
+                            style="@style/spinner_style" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--Layout para campo textEdit-->
+                <LinearLayout style="@style/linearLayout_vertical_edt">
+
+                    <TextView
+                        style="@style/textViewFiltro"
+                        android:text="@string/grupo"/>
+
+                    <!-- android:imeOptions="actionDone"-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spnGrupo"
+                            style="@style/spinner_style" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--Layout para campo textEdit-->
+                <LinearLayout style="@style/linearLayout_vertical_edt">
+
+                    <TextView
+                        style="@style/textViewFiltro"
+                        android:text="@string/zona"/>
+
+                    <!-- android:imeOptions="actionDone"-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/edit_text">
+
+                        <android.support.v7.widget.AppCompatSpinner
+                            android:id="@+id/spnZona"
+                            style="@style/spinner_style"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_adapter"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</FrameLayout>

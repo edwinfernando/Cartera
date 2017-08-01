@@ -1,0 +1,93 @@
+<resources>
+    <string name="app_name">Cartera</string>
+    <string name="usuario">Usuario</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="iniciar_sesion">Iniciar sesión</string>
+    <string name="olvidaste_contraseña">Olvide mi contraseña</string>
+    <string name="title_activity_productos">ProductosActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="recaudos">Recaudos</string>
+    <string name="clientes">Clientes</string>
+    <string name="promesas">Promesas</string>
+    <string name="reportes">Reportes</string>
+    <string name="search">Buscar cliente...</string>
+    <string name="empresa">Empresa:</string>
+    <string name="cuenta">Cuenta:</string>
+    <string name="cliente">Cliente:</string>
+    <string name="saldo">Saldo:</string>
+    <string name="grupo">Grupo:</string>
+    <string name="s_vencida">S. vencida:</string>
+    <string name="d_mora">D. mora:</string>
+    <string name="aplicar">Aplicar</string>
+    <string name="zona">Zona:</string>
+    <string name="ver_cliente">Ver cliente</string>
+    <string name="ver_mapa">Ver mapa</string>
+    <string name="recaudar">Recaudar</string>
+    <string name="n_coutas">N. cuotas:</string>
+    <string name="f_obligacion">F. obligación:</string>
+    <string name="f_pago">F. pago:</string>
+    <string name="cuota">Cuota:</string>
+    <string name="saldo_couta">Saldo cuota:</string>
+    <string name="informacion">Información</string>
+    <string name="gestiones">Gestiones</string>
+    <string name="agregar_cierre">Agregar cierre</string>
+    <string name="posponer_pago">Posponer pago</string>
+    <string name="direccion">Dirección</string>
+    <string name="telefono">Teléfono</string>
+    <string name="celular">Celular</string>
+    <string name="email">Email</string>
+    <string name="departamento">Departamento:</string>
+    <string name="ciudad">Ciudad:</string>
+    <string name="barrio">Barrio:</string>
+    <string name="direccion_p">Dirección:</string>
+    <string name="tipo">Tipo:</string>
+    <string name="fecha">Fecha:</string>
+    <string name="usuario_p">Usuario:</string>
+    <string name="cierre">Cierre:</string>
+    <string name="detalle">Detalle:</string>
+    <string name="hora">Hora:</string>
+    <string name="valor">Valor:</string>
+
+    <string name="cantidad">Cant.:</string>
+    <string name="total">Total:</string>
+    <string name="telefono_p">Teléfono:</string>
+    <string name="celular_p">Celular:</string>
+    <string name="email_p">Email:</string>
+
+    <string name="cuenta_nro">Cuenta Nº:</string>
+    <string name="valor_cuota">Valor couta:</string>
+    <string name="couta_nro">Couta Nº:</string>
+    <string name="fecha_vencimiento">Fecha de vencimiento:</string>
+    <string name="saldo_al_pagar_esta_cuota">Saldo al pagar esta cuota:</string>
+    <string name="fecha_de_pago">Fecha de pago:</string>
+    <string name="valor_de_pago">Valor de pago:</string>
+    <string name="hora_de_pago">Hora de pago:</string>
+    <string name="nota">Nota:</string>
+    <string name="msg_imprimir_comprobante_pago">Por favor, imprima el comprobante de pago</string>
+    <string name="msg_id_empresa">MASTER KEY OF STIMULATION LTDA. \n NIT. 805.028.053-2</string>
+    <string name="recido_de_pago">Recibo de pago:</string>
+    <string name="cuota_nro">Couta N°:</string>
+    <string name="saldo_a_pagar">SALDO A PAGAR:</string>
+    <string name="gestor">Gestor:</string>
+    <string name="imprimir">Imprimir</string>
+    <string name="comprobante_pago">Comprobante de pago</string>
+    <string name="filtrar">Filtrar</string>
+    <string name="ver_lista">Ver lista</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="configurarImpresora">Configurar impresora</string>
+    <string name="desconectar">Desconectar</string>
+    <string name="sincronizar">Sincronizar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="mensajeSincronizandoImpresora">Sincronizando impresora, por favor espere un momento...</string>
+    <string name="seleccionarImpresora">Seleccione impresora:</string>
+    <string name="buscar_cliente">Buscar cliente</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+
+
+</resources>

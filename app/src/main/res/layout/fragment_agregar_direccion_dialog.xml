@@ -1,0 +1,111 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.cartera.masterkey.cartera.views.dialogs.AgregarDireccionDialogFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingTop="10dp">
+
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/departamento" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_white">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spnDepartamento"
+                    style="@style/spinner_style" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/ciudad" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_white">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spnCiudad"
+                    style="@style/spinner_style" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/barrio" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <EditText
+                android:id="@+id/edtBarrio"
+                style="@style/editText_style"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/direccion_p" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <EditText
+                android:id="@+id/edtDireccion"
+                style="@style/editText_style"
+                android:editable="false"
+                android:layout_height="40dp"
+                android:layout_marginRight="0dp"
+                android:paddingRight="10dp"
+                android:gravity="right|center"
+                android:textColor="#ff000000" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/linearLayout_vertical_edt">
+
+            <TextView
+                style="@style/textView"
+                android:text="@string/tipo" />
+
+            <!-- android:imeOptions="actionDone"-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/edit_text_white">
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/spnTipo"
+                    style="@style/spinner_style" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
