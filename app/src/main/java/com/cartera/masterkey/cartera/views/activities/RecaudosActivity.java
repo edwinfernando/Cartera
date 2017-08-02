@@ -55,17 +55,17 @@ public class RecaudosActivity extends AppCompatActivity implements FragmentManag
 
     @Override
     public void onBackPressed() {
-        int fragments = getSupportFragmentManager().getBackStackEntryCount();
-        if (fragments > 1) {
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP && fragments >= 3) {
+      //  int fragments = getSupportFragmentManager().getBackStackEntryCount();
+       // if (fragments > 1) {
+       //     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP && fragments >= 3) {
                 //  Utilidades.onFragmentTouched(getSupportFragmentManager().getFragments().get(fragments - 1), x, y);
-            } else {
-                getSupportFragmentManager().popBackStackImmediate();
-            }
-        } else {
+      //      } else {
+       //         getSupportFragmentManager().popBackStackImmediate();
+     //       }
+        //} else {
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
-        }
+      //  }
     }
 
     @Override

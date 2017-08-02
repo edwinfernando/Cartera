@@ -91,6 +91,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="opciones">Opciones</string>
     <string name="confirmar_pago">Confirmar pago</string>
+    <string name="cerrar">Esta seguro que desea cerrar sesión?</string>
 
 
 </resources>

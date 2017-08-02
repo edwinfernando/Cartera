@@ -1,10 +1,13 @@
 package com.cartera.masterkey.cartera.views.activities;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -18,10 +21,13 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.cartera.masterkey.cartera.R;
+import com.cartera.masterkey.cartera.util.InformacionSession;
 import com.cartera.masterkey.cartera.views.fragments.ProductosFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import service.BluetoothService;
+import service.RunServicePrinter;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, FragmentManager.OnBackStackChangedListener {
@@ -77,14 +83,8 @@ public class MainActivity extends AppCompatActivity
 
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else if (fragments > 1) {
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP && fragments >= 3) {
-                //      //  Utilidades.onFragmentTouched(getSupportFragmentManager().getFragments().get(fragments - 1), x, y);
-            } else {
-                getSupportFragmentManager().popBackStackImmediate();
-            }
         } else {
-            super.onBackPressed();
+            alertDialogCerrarSesion();
         }
     }
 
@@ -126,6 +126,38 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void alertDialogCerrarSesion() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setMessage(R.string.cerrar)
+                .setTitle(R.string.informacion);
+
+        builder.setPositiveButton(R.string.aceptar, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                if (BluetoothService.isRunning) {
+                    RunServicePrinter runServicePrinter = new RunServicePrinter(MainActivity.this, InformacionSession.getInstance().getImpresora().getAddress());
+                    try {
+                        runServicePrinter.stop();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        builder.setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+
+            }
+        });
+
+        builder.show();
+
     }
 
     @Override
