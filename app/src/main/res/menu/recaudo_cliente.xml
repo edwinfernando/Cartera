@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/btnVerCliente"
+        android:id="@+id/action_ver_cliente"
         android:orderInCategory="100"
         android:title="@string/ver_cliente"
         android:icon="@drawable/ic_action_cliente"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/btnPosponerPago"
+        android:id="@+id/action_posponer_pago"
         android:orderInCategory="100"
         android:title="@string/posponer_pago"
         app:showAsAction="withText" />

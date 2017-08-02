@@ -88,6 +88,9 @@
     <string name="seleccionarImpresora">Seleccione impresora:</string>
     <string name="buscar_cliente">Buscar cliente</string>
     <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="opciones">Opciones</string>
+    <string name="confirmar_pago">Confirmar pago</string>
 
 
 </resources>

@@ -3,6 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/colorWhite"
+    android:foreground="@drawable/selectable_item_background"
+    android:clickable="true"
     android:orientation="vertical"
     android:paddingLeft="@dimen/margin_adapter"
     android:paddingRight="@dimen/margin_adapter"

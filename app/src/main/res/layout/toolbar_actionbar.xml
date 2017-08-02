@@ -16,11 +16,14 @@
         app:popupTheme="@style/AppTheme.PopupOverlay"
         app:titleTextAppearance="@style/AppTheme.Toolbar.Title">
 
-        <ImageView
+        <TextView
+            android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:layout_marginRight="10dp"
-            android:src="@null" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Titulo del Toolbar"
+            android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:textStyle="bold"/>
     </android.support.v7.widget.Toolbar>
 </android.support.design.widget.AppBarLayout>

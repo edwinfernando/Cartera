@@ -2,65 +2,74 @@ package com.cartera.masterkey.cartera.views.dialogs;
 
 
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.cartera.masterkey.cartera.R;
+import com.cartera.masterkey.cartera.models.Cliente;
+import com.cartera.masterkey.cartera.views.fragments.RealizarRecaudoFragment;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link OpcionesClientesDialogFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class OpcionesClientesDialogFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+public class OpcionesClientesDialogFragment extends DialogFragment {
 
+    private Cliente cliente;
 
     public OpcionesClientesDialogFragment() {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment OpcionesClientesDialogFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static OpcionesClientesDialogFragment newInstance(String param1, String param2) {
+    public static OpcionesClientesDialogFragment newInstance(Cliente cliente) {
         OpcionesClientesDialogFragment fragment = new OpcionesClientesDialogFragment();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
+        fragment.cliente = cliente;
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        setStyle(STYLE_NORMAL, R.style.CustomDialog);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_opciones_clientes_dialog, container, false);
+        getDialog().setTitle(R.string.opciones);
+        View view = inflater.inflate(R.layout.fragment_opciones_clientes_dialog, container, false);
+        ButterKnife.bind(this, view);
+
+        return view;
     }
 
+    @OnClick(R.id.btnVerCliente)
+    public void clickBotonVerCliente() {
+        getDialog().dismiss();
+    }
+
+    @OnClick(R.id.btnVerMapa)
+    public void clickBotonVerMapa() {
+        getDialog().dismiss();
+    }
+
+    @OnClick(R.id.btnRecaudar)
+    public void clickBotonRecaudar() {
+        getDialog().dismiss();
+        FragmentManager fragmentManager = getFragmentManager();
+        RealizarRecaudoFragment realizarRecaudoFragment =RealizarRecaudoFragment.newInstance(cliente);
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        //fragmentTransaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
+        // fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.replace(R.id.fragment_container, realizarRecaudoFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+    }
 }

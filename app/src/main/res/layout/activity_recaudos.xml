@@ -6,9 +6,10 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.cartera.masterkey.cartera.views.activities.ClientesActivity">
+    tools:context="com.cartera.masterkey.cartera.views.activities.RecaudosActivity">
 
-    <include layout="@layout/toolbar_search" />
+    <include layout="@layout/toolbar_actionbar" />
+
 
     <FrameLayout
         android:id="@+id/fragment_container"

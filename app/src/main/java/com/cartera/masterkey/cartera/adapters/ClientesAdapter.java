@@ -8,7 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.cartera.masterkey.cartera.R;
-import com.cartera.masterkey.cartera.models.Clientes;
+import com.cartera.masterkey.cartera.models.Cliente;
+import com.cartera.masterkey.cartera.presenters.fragments.IListaClientesPresenter;
 
 import java.util.List;
 
@@ -19,13 +20,15 @@ import butterknife.ButterKnife;
  * Created by edwin on 31/07/2017.
  */
 
-public class ClientesAdapter extends RecyclerView.Adapter<ClientesAdapter.ClientesHolder> implements View.OnClickListener {
+public class ClientesAdapter extends RecyclerView.Adapter<ClientesAdapter.ClientesHolder>  {
     private Context context;
-    private List<Clientes> dataResources;
+    private List<Cliente> dataResources;
+    private IListaClientesPresenter presenter;
 
-    public ClientesAdapter(Context context, List<Clientes> dataResources) {
+    public ClientesAdapter(Context context, List<Cliente> dataResources, IListaClientesPresenter presenter) {
         this.context = context;
         this.dataResources = dataResources;
+        this.presenter = presenter;
     }
 
     @Override
@@ -37,7 +40,7 @@ public class ClientesAdapter extends RecyclerView.Adapter<ClientesAdapter.Client
 
     @Override
     public void onBindViewHolder(ClientesHolder holder, int position) {
-        Clientes clientes = dataResources.get(position);
+        final Cliente clientes = dataResources.get(position);
         holder.txtEmpresa.setText(clientes.getEmpresa());
         holder.txtCuenta.setText(clientes.getCuenta());
         holder.txtCliente.setText(clientes.getCliente());
@@ -46,17 +49,17 @@ public class ClientesAdapter extends RecyclerView.Adapter<ClientesAdapter.Client
         holder.txtSVencida.setText(clientes.getsVencida());
         holder.txtDMora.setText(clientes.getdMora());
 
-        holder.itemView.setOnClickListener(this);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                presenter.showDialogOpcionesClientes(clientes);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
         return dataResources.size();
-    }
-
-    @Override
-    public void onClick(View v) {
-
     }
 
     public static class ClientesHolder extends RecyclerView.ViewHolder{

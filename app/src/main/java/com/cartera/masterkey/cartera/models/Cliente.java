@@ -4,7 +4,7 @@ package com.cartera.masterkey.cartera.models;
  * Created by edwin on 31/07/2017.
  */
 
-public class Clientes {
+public class Cliente {
 
     private String empresa;
     private String cuenta;

@@ -1,5 +1,6 @@
 package com.cartera.masterkey.cartera.views.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.cartera.masterkey.cartera.R;
+import com.cartera.masterkey.cartera.views.activities.RecaudosActivity;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -41,14 +43,7 @@ public class ProductosFragment extends Fragment {
     }
 
     public void gotoFragmentOpcionesRecaudos() {
-        FragmentManager fragmentManager = getFragmentManager();
-        OpcionesRecaudosFragment fragment = new OpcionesRecaudosFragment();
-
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        //fragmentTransaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
-       // fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
-        fragmentTransaction.replace(R.id.fragment_container, fragment);
-        fragmentTransaction.addToBackStack(null);
-        fragmentTransaction.commit();
+        Intent intent = new Intent(getActivity(), RecaudosActivity.class);
+        startActivity(intent);
     }
 }

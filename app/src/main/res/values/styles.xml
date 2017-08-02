@@ -201,7 +201,7 @@
     <style name="linearLayout_vertical">
         <item name="android:orientation">vertical</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">2</item>
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:paddingRight">8dp</item>
@@ -214,7 +214,7 @@
     <style name="linearLayout_horizontal">
         <item name="android:orientation">horizontal</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_weight">2</item>
     </style>
 
@@ -261,4 +261,8 @@
 
     </style>
 
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_down</item>
+        <item name="android:windowExitAnimation">@anim/slide_up</item>
+    </style>
 </resources>

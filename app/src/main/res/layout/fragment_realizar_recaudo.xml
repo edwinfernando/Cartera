@@ -6,7 +6,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout style="@style/linearLayout_vertical_edt">
@@ -16,14 +16,14 @@
                 android:text="@string/cliente" />
 
             <!-- android:imeOptions="actionDone"-->
-            <TextView
+            <EditText
                 android:id="@+id/txtCliente"
                 style="@style/editText_style"
-                android:editable="false"
                 android:layout_height="40dp"
                 android:layout_marginRight="0dp"
-                android:paddingRight="10dp"
+                android:editable="false"
                 android:gravity="right|center"
+                android:paddingRight="10dp"
                 android:textColor="#ff000000" />
 
         </LinearLayout>
@@ -35,14 +35,14 @@
                 android:text="@string/cuenta_nro" />
 
             <!-- android:imeOptions="actionDone"-->
-            <TextView
+            <EditText
                 android:id="@+id/txtCuentaNro"
                 style="@style/editText_style"
-                android:editable="false"
                 android:layout_height="40dp"
                 android:layout_marginRight="0dp"
-                android:paddingRight="10dp"
+                android:editable="false"
                 android:gravity="right|center"
+                android:paddingRight="10dp"
                 android:textColor="#ff000000" />
 
         </LinearLayout>
@@ -64,8 +64,9 @@
                 <EditText
                     android:id="@+id/edtValorCouta"
                     style="@style/editText_style"
-                    android:background="@drawable/gradient_edit_text"
+                    android:layout_height="40dp"
                     android:layout_marginRight="0dp"
+                    android:background="@drawable/gradient_edit_text"
                     android:gravity="left|center"
                     android:textColor="@color/colorWhite" />
 
@@ -81,11 +82,12 @@
                     android:text="@string/couta_nro" />
 
                 <EditText
-                    android:id="@+id/edtNumeroCopias"
+                    android:id="@+id/edtCoutaNro"
                     style="@style/editText_style"
+                    android:layout_height="40dp"
                     android:layout_marginRight="0dp"
-                    android:gravity="left|center"
                     android:editable="false"
+                    android:gravity="left|center"
                     android:textColor="#ff000000" />
 
             </LinearLayout>
@@ -98,14 +100,14 @@
                 android:text="@string/fecha_vencimiento" />
 
             <!-- android:imeOptions="actionDone"-->
-            <TextView
+            <EditText
                 android:id="@+id/txtFechaVencimiento"
                 style="@style/editText_style"
-                android:editable="false"
                 android:layout_height="40dp"
                 android:layout_marginRight="0dp"
-                android:paddingRight="10dp"
+                android:editable="false"
                 android:gravity="right|center"
+                android:paddingRight="10dp"
                 android:textColor="#ff000000" />
 
         </LinearLayout>
@@ -117,15 +119,15 @@
                 android:text="@string/saldo_al_pagar_esta_cuota" />
 
             <!-- android:imeOptions="actionDone"-->
-            <TextView
+            <EditText
                 android:id="@+id/txtSaldoAlPagar"
                 style="@style/editText_style"
-                android:background="@drawable/gradient_edit_text"
-                android:editable="false"
                 android:layout_height="40dp"
                 android:layout_marginRight="0dp"
-                android:paddingRight="10dp"
+                android:background="@drawable/gradient_edit_text"
+                android:editable="false"
                 android:gravity="right|center"
+                android:paddingRight="10dp"
                 android:textColor="@color/colorWhite" />
 
         </LinearLayout>
@@ -136,15 +138,14 @@
                 style="@style/textView"
                 android:text="@string/fecha_de_pago" />
 
-
             <EditText
                 android:id="@+id/txtFechaPago"
                 style="@style/editText_style"
-                android:editable="false"
                 android:layout_height="40dp"
                 android:layout_marginRight="0dp"
-                android:paddingRight="10dp"
+                android:editable="false"
                 android:gravity="right|center"
+                android:paddingRight="10dp"
                 android:textColor="#ff000000" />
 
         </LinearLayout>

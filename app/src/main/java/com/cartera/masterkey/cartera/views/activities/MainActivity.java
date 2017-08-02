@@ -5,6 +5,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,14 +15,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import com.cartera.masterkey.cartera.R;
 import com.cartera.masterkey.cartera.views.fragments.ProductosFragment;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener, FragmentManager.OnBackStackChangedListener {
+
+    @Bind(R.id.toolbar_title)
+    TextView toolbar_title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +38,9 @@ public class MainActivity extends AppCompatActivity
         toolbar.setTitle("");
         setSupportActionBar(toolbar);
 
-       // ButterKnife.bind(this);
+        ButterKnife.bind(this);
+
+        toolbar_title.setText("Productos");
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -66,15 +74,16 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         int fragments = getSupportFragmentManager().getBackStackEntryCount();
+
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }else if (fragments > 1) {
+        } else if (fragments > 1) {
             if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP && fragments >= 3) {
-                //  Utilidades.onFragmentTouched(getSupportFragmentManager().getFragments().get(fragments - 1), x, y);
+                //      //  Utilidades.onFragmentTouched(getSupportFragmentManager().getFragments().get(fragments - 1), x, y);
             } else {
                 getSupportFragmentManager().popBackStackImmediate();
             }
-        }else {
+        } else {
             super.onBackPressed();
         }
     }
@@ -88,13 +97,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_cerrar_sesion) {
             return true;
         }
 
@@ -104,11 +108,9 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_camera) {
-            // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
         } else if (id == R.id.nav_slideshow) {

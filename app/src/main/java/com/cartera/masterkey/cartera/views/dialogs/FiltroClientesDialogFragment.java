@@ -1,48 +1,41 @@
 package com.cartera.masterkey.cartera.views.dialogs;
 
 
+import android.animation.Animator;
+import android.app.Activity;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.support.v4.app.Fragment;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
 
 import com.cartera.masterkey.cartera.R;
+import com.cartera.masterkey.cartera.util.Utilidades;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link FiltroClientesDialogFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class FiltroClientesDialogFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
+public class FiltroClientesDialogFragment extends DialogFragment {
 
     public FiltroClientesDialogFragment() {
-        // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment FiltroClientesDialogFragment.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static FiltroClientesDialogFragment newInstance(String param1, String param2) {
+    public static FiltroClientesDialogFragment newInstance(int centerX, int centerY) {
         FiltroClientesDialogFragment fragment = new FiltroClientesDialogFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
+        args.putInt("cx", centerX);
+        args.putInt("cy", centerY);
         fragment.setArguments(args);
         return fragment;
     }
@@ -50,17 +43,76 @@ public class FiltroClientesDialogFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+        setHasOptionsMenu(true);
+        setStyle(STYLE_NO_TITLE, R.style.AppTheme_NoActionBar);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_filtro_clientes_dialog, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_filtro_clientes_dialog, container, false);
+
+        ButterKnife.bind(this, view);
+
+        view.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+            @Override
+            public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop,
+                                       int oldRight, int oldBottom) {
+                v.removeOnLayoutChangeListener(this);
+                int cx = getArguments().getInt("cx");
+                int cy = getArguments().getInt("cy");
+
+                int radius = (int) Math.hypot(right, bottom);
+
+                Animator reveal = null;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    reveal = ViewAnimationUtils.createCircularReveal(v, cx, cy, 0, radius + 500);
+                    reveal.setInterpolator(new DecelerateInterpolator(2f));
+                    reveal.setDuration(1500);
+                    reveal.start();
+                }
+            }
+        });
+
+        return view;
     }
 
+    @Override
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        final Dialog dialog = super.onCreateDialog(savedInstanceState);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            dialog.getWindow().getAttributes().windowAnimations = R.style.DialogAnimation;
+        } else {
+            dialog.setOnKeyListener(new DialogInterface.OnKeyListener() {
+                @Override
+                public boolean onKey(DialogInterface dialogInterface, int i, KeyEvent keyEvent) {
+                    if (i == android.view.KeyEvent.KEYCODE_BACK) {
+                        //Hide your keyboard here!!!
+                        Utilidades.onDialogTouched(FiltroClientesDialogFragment.this, 1000, 20);
+                        return true; // pretend we've processed it
+                    }
+                    return false;
+                }
+            });
+        }
+
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        return dialog;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+    }
+
+    @OnClick(R.id.cancelar_filtro)
+    public void cancelarFiltro() {
+        Utilidades.onDialogTouched(this, 1000, 20);
+    }
+
+    @OnClick(R.id.aplicar_filtro)
+    public void aplicarFiltro() {
+        Utilidades.onDialogTouched(this, 1000, 20);
+    }
 }
