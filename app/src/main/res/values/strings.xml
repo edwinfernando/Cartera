@@ -34,8 +34,8 @@
     <string name="f_pago">F. pago:</string>
     <string name="cuota">Cuota:</string>
     <string name="saldo_couta">Saldo cuota:</string>
-    <string name="informacion">Información</string>
-    <string name="gestiones">Gestiones</string>
+    <string name="informacion">Ver información</string>
+    <string name="gestiones">Ver gestiones</string>
     <string name="agregar_cierre">Agregar cierre</string>
     <string name="posponer_pago">Posponer pago</string>
     <string name="direccion">Dirección</string>
@@ -92,6 +92,26 @@
     <string name="opciones">Opciones</string>
     <string name="confirmar_pago">Confirmar pago</string>
     <string name="cerrar">Esta seguro que desea cerrar sesión?</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nombre_prueba">NOMBRE PRUEBA</string>
+    <string name="residencial">Residencial</string>
+    <string name="telefonos">Teléfonos:</string>
+    <string name="comercial">Comercial</string>
+    <string name="personal">Personal</string>
+    <string name="lugar_trabajo">Lugar trabajo:</string>
+    <string name="ultimo_cierre">Ultímo cierre:</string>
+    <string name="solicitud">Solicitud:</string>
+    <string name="factura">Factura:</string>
+    <string name="estado">Estado:</string>
+    <string name="totsl_credito">Total credito:</string>
+    <string name="valor_pagado">Valor pagado:</string>
+    <string name="dias_en_mora">Días en mora:</string>
+    <string name="asesor">Asesor:</string>
+    <string name="analista">Analista:</string>
+    <string name="detalle_de_la_cuenta">Detalle de la cuenta</string>
+    <string name="detalle_del_cliente">Detalle del cliente</string>
 
 
 </resources>

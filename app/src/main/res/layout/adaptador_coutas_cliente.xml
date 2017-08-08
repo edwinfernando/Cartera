@@ -79,14 +79,14 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.5"
             android:text="@string/cuota" />
 
         <TextView
             android:id="@+id/txtCouta"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
+            android:layout_weight="0.5"
             android:gravity="right"
             android:text="0000" />
 
@@ -121,15 +121,15 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.7"
+            android:layout_weight="0.5"
             android:text="@string/saldo" />
 
         <TextView
-            android:background="@drawable/gradient_text_view"
             android:id="@+id/txtSaldo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="0.3"
+            android:layout_weight="0.5"
+            android:background="@drawable/gradient_text_view"
             android:gravity="right"
             android:text="0000" />
 

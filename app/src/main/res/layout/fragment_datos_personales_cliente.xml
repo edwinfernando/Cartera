@@ -1,0 +1,286 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartera.masterkey.cartera.views.fragments.DatosPersonalesClienteFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtNombreCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/activity_horizontal_margin"
+                android:text="@string/nombre_prueba"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp" />
+
+            <!--  Informacion residencial  -->
+            <LinearLayout
+                style="@style/linearLayout_horizontal"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlackAlpha" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:text="@string/residencial" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlackAlpha" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ciudad"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtCiudadResidencial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BOLIVAR / RIO VIEJO"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/direccion_p"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtDireccionResidencial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MACEDONIA, CORREGIMIENTO "
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telefonos"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtTelefonosResidencial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3207718515"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--  Informacion comercial  -->
+            <LinearLayout
+                style="@style/linearLayout_horizontal"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlackAlpha" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:text="@string/comercial" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlackAlpha" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ciudad"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtCiudadComercial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="BOLIVAR / RIO VIEJO"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/direccion_p"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtDireccionComercial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MACEDONIA, CORREGIMIENTO "
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/telefonos"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtTelefonosComercial"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3207718515"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!--  Informacion personal  -->
+            <LinearLayout
+                style="@style/linearLayout_horizontal"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlackAlpha" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="@dimen/activity_horizontal_margin"
+                    android:text="@string/personal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorBlackAlpha" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/celular_p"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtCelularPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3207718515"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email_p"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtEmailPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="psleydis@gmail.com"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lugar_trabajo"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtLugarTrabajoPersonal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CDI PEQUEÑOS GENIOS"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ultimo_cierre"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtTelefonos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NO CONTACTO / NO CONTEXTA"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

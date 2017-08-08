@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Cartera.iml" filepath="$PROJECT_DIR$/Cartera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cartera.iml" filepath="$PROJECT_DIR$/Cartera.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LibreriaImpresoraBluetooth/LibreriaImpresoraBluetooth.iml" filepath="$PROJECT_DIR$/LibreriaImpresoraBluetooth/LibreriaImpresoraBluetooth.iml" />
       <module fileurl="file://$PROJECT_DIR$/LibreriaImpresoraBluetooth/LibreriaImpresoraBluetooth.iml" filepath="$PROJECT_DIR$/LibreriaImpresoraBluetooth/LibreriaImpresoraBluetooth.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>

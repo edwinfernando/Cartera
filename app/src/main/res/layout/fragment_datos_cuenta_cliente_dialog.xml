@@ -1,0 +1,234 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cartera.masterkey.cartera.views.dialogs.DatosCuentaClienteDialogFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/empresa"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtEmpresaCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MASTER KEY OF STIMULATION S.A.S."
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/solicitud"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtSolicitudCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0077822"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/factura"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtFacturaCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00000040018"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fecha"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtFechaCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="2016-09-06"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/estado"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtEstadoCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ACTIVA"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/totsl_credito"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtTotalCreditoCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="750,000.00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valor_cuota"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtValorCoutaCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="75,000.00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valor_pagado"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtValorPagado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0.00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/saldo"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtSaldoCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="750,000.00"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dias_en_mora"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtDiasMoraCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="290"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/asesor"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtAsesorCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CARLOS ANDRES PEREZ GRAJALES"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/linearLayout_vertical_edt"
+                android:layout_marginBottom="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/analista"
+                    android:textColor="@color/colorPrimary" />
+
+                <TextView
+                    android:id="@+id/txtAnalistaCuenta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CASTIGO"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

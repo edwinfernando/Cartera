@@ -49,11 +49,11 @@ public class ClientesActivity extends AppCompatActivity implements FragmentManag
     public void onBackPressed() {
         int fragments = getSupportFragmentManager().getBackStackEntryCount();
         if (fragments > 1) {
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP && fragments >= 3) {
+           // if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP && fragments >= 3) {
               //  Utilidades.onFragmentTouched(getSupportFragmentManager().getFragments().get(fragments - 1), x, y);
-            } else {
+           // } else {
                 getSupportFragmentManager().popBackStackImmediate();
-            }
+           // }
         } else {
             Intent intent = new Intent(this, RecaudosActivity.class);
             startActivity(intent);

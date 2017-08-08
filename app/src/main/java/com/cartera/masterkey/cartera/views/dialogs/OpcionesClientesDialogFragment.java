@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.cartera.masterkey.cartera.R;
 import com.cartera.masterkey.cartera.models.Cliente;
+import com.cartera.masterkey.cartera.views.fragments.InformacionCuotasClienteFragment;
 import com.cartera.masterkey.cartera.views.fragments.RealizarRecaudoFragment;
 
 import butterknife.Bind;
@@ -52,6 +53,15 @@ public class OpcionesClientesDialogFragment extends DialogFragment {
     @OnClick(R.id.btnVerCliente)
     public void clickBotonVerCliente() {
         getDialog().dismiss();
+        FragmentManager fragmentManager = getFragmentManager();
+        InformacionCuotasClienteFragment informacionCuotasClienteFragment = InformacionCuotasClienteFragment.newInstance(cliente);
+
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        //fragmentTransaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
+        // fragmentTransaction.setCustomAnimations(R.anim.enter_from_right, R.anim.exit_to_left, R.anim.enter_from_left, R.anim.exit_to_right);
+        fragmentTransaction.replace(R.id.fragment_container, informacionCuotasClienteFragment);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
     }
 
     @OnClick(R.id.btnVerMapa)
@@ -63,7 +73,7 @@ public class OpcionesClientesDialogFragment extends DialogFragment {
     public void clickBotonRecaudar() {
         getDialog().dismiss();
         FragmentManager fragmentManager = getFragmentManager();
-        RealizarRecaudoFragment realizarRecaudoFragment =RealizarRecaudoFragment.newInstance(cliente);
+        RealizarRecaudoFragment realizarRecaudoFragment = RealizarRecaudoFragment.newInstance(cliente);
 
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         //fragmentTransaction.setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_right);
